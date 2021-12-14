@@ -1,0 +1,9 @@
+.center {
+    display: flex;
+    justify-content: center;
+  }
+  .space {
+    margin-top: 75px;
+    margin-bottom: 25px;
+  }
+  

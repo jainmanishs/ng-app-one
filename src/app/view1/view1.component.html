@@ -1,4 +1,22 @@
-<app-nav></app-nav>
-<p>
+<app-panel>
+<app-nav class="center"></app-nav>
+<p class="center">
   app1 view1 works!
 </p>
+<div class="center">
+  plantList
+  {{plantList | json}}
+</div>
+<div class="center">
+  <button (click)="getDashboardData()" color="primary" mat-raised-button>
+    Get Dashboard Settings
+  </button>
+</div>
+<div *ngIf="!isLoading" class="center space-side">
+  {{dashboardData | json }}
+</div>
+<div class="center space" *ngIf="isLoading">
+  <mat-progress-spinner [color]="'primary'" [mode]="'indeterminate'" [diameter]="35"></mat-progress-spinner>
+</div>
+
+</app-panel>
