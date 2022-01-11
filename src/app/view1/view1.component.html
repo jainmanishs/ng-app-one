@@ -1,4 +1,8 @@
-<app-panel>
+<app-header [headerBreadcrumbs] = "getHeaderBreadcrumbs()" ></app-header>
+<br>
+<br>
+<br>
+
 <app-nav class="center"></app-nav>
 <p class="center">
   app1 view1 works!
@@ -7,6 +11,9 @@
   plantList
   {{plantList | json}}
 </div>
+<br>
+<br>
+<br>
 <div class="center">
   <button (click)="getDashboardData()" color="primary" mat-raised-button>
     Get Dashboard Settings
@@ -18,5 +25,3 @@
 <div class="center space" *ngIf="isLoading">
   <mat-progress-spinner [color]="'primary'" [mode]="'indeterminate'" [diameter]="35"></mat-progress-spinner>
 </div>
-
-</app-panel>

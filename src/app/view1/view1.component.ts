@@ -7,6 +7,7 @@ import { AuthenticationService, AuthenticationState } from 'libs/core/src';
 import { Observable } from 'rxjs';
 import { UserSettings, UserSettingsCls } from 'src/app/all-models/etc.model';
 import { DashboardPanelModel } from 'src/app/all-models/sv-dashboard';
+import { HeaderBreadcrumb } from 'src/app/shared/models/common-models';
 @Component({
   selector: 'app-view1',
   templateUrl: './view1.component.html',
@@ -74,5 +75,20 @@ export class View1Component implements OnInit {
 
   renewToken(){
     // this.authService.oi
+  }
+  getHeaderBreadcrumbs(): HeaderBreadcrumb[] {
+    
+    const headerBreadcrumbs: HeaderBreadcrumb[] = [
+      {
+        navigateTitle: "Main App",
+        navigateUrl: "/dashboard"
+      },
+      {
+        navigateTitle: "App 1",
+        navigateUrl: "/app1"
+      }
+    ]
+
+    return headerBreadcrumbs;
   }
 }
